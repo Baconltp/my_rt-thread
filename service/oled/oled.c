@@ -29,7 +29,7 @@ u8g2_t * get_disp_handel(void)
     return &_u8g2;
 }
 
-void disp_log_page()
+void disp_loga_page()
 {
     u8g2_t * dispHandle = get_disp_handel();
     u8g2_ClearBuffer(dispHandle);
@@ -40,7 +40,7 @@ void disp_log_page()
     u8g2_SendBuffer(dispHandle);
     return;
 }
-MSH_CMD_EXPORT(disp_log_page, disp log page); 
+MSH_CMD_EXPORT(disp_loga_page, disp log page);
 
 void disp_temperature_page()
 {
@@ -55,7 +55,9 @@ void disp_temperature_page()
     {
         u8g2_SetFont(dispHandle, u8g_font_6x13);
         u8g2_DrawStr(dispHandle, 1, 22, "Temperature:");
-        u8g2_DrawStr(dispHandle, 78, 22, string);
+        u8g2_DrawStr(dispHandle, 74, 22, string);
+        show_bmp(dispHandle, &bmp_degree);
+        //u8g2_DrawStr(dispHandle, 107, 22, "C");
     }
     else
     {

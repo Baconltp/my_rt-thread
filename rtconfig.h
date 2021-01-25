@@ -91,8 +91,6 @@
 #define RT_USING_I2C
 #define RT_USING_I2C_BITOPS
 #define RT_USING_PIN
-#define RT_USING_SENSOR
-#define RT_USING_SENSOR_CMD
 
 /* Using USB */
 
@@ -185,7 +183,6 @@
 
 /* U8G2 Examples */
 
-#define U8G2_USING_HW_I2C_SSD1306
 /* end of U8G2 Examples */
 #define PKG_USING_U8G2_C_LATEST_VERSION
 

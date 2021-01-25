@@ -1,4 +1,3 @@
-
 #include <sts30.h>
 
 static struct rt_i2c_bus_device *i2c_bus = RT_NULL; 
@@ -147,4 +146,3 @@ void i2c_sts30_sample(int argc, char *argv[])
 }
 /* 导出到 msh 命令列表中 */
 MSH_CMD_EXPORT(i2c_sts30_sample, i2c sts30 sample);
-
